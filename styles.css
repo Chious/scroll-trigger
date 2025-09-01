@@ -1,0 +1,48 @@
+/* Canvas 樣式 */
+.hero-canvas {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* 載入指示器樣式 */
+#frame-loader {
+  font-family: "TASA Explorer", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* 平滑滾動優化 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 效能優化 */
+.hero {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  /* 確保 pin 效果的正確層疊 */
+  position: relative;
+  z-index: 1;
+}
+
+.hero-canvas {
+  will-change: contents;
+  transform: translateZ(0);
+}
+
+/* Join Teams 區域確保在 hero pin 之後正確顯示 */
+.join-teams {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    rgb(248 250 252) 0%,
+    rgb(219 234 254) 100%
+  );
+}
+
+/* 響應式優化 */
+@media (max-width: 768px) {
+  .hero-canvas {
+    image-rendering: auto;
+  }
+}
