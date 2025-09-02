@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.ticker.lagSmoothing(0);
 
   // Frame Animation 設定
-  const frameCount = 251; // 從 frame_0001.jpg 到 frame_0251.jpg
+  const frameCount = 250; // 從 frame_0001.jpg 到 frame_0250.jpg
   const images = [];
   let imagesLoaded = 0;
 
